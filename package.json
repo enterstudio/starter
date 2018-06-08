@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "postinstall": "./node_modules/.bin/bower cache clean --allow-root && ./node_modules/.bin/bower install --allow-root && node ./src/post_install.js"
+    "postinstall": "./node_modules/.bin/bower cache clean --allow-root && ./node_modules/.bin/bower install --allow-root && node ./src/post_install.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,7 @@
     "JSONStream": "^1.2.1",
     "bluebird": "^3.3.5",
     "body-parser": "^1.15.2",
-    "bootstrap": "^3.3.6",
+    "bootstrap": "^4.0.0",
     "bower": "^1.8.0",
     "colors": "^1.1.2",
     "connect-redis": "^3.2.0",
@@ -55,9 +57,10 @@
     "slug": "^0.9.1",
     "tcp-port-used": "^0.1.2",
     "underscore": "^1.8.3",
-    "unicode": "^0.6.1",
+    "unicode": "^9.0.0",
     "urijs": "^1.18.2",
-    "winston": "^2.2.0"
+    "winston": "^2.2.0",
+    "snyk": "^1.82.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -65,5 +68,6 @@
     "should": "^11.1.2",
     "sinon": "^1.17.6",
     "supertest": "^2.0.1"
-  }
+  },
+  "snyk": true
 }
