@@ -1,0 +1,18 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-450202:
+    - lodash:
+        patched: '2019-07-04T02:07:39.456Z'
+    - itemsapi-node > lodash:
+        patched: '2019-07-04T02:07:39.456Z'
+    - mongoose > async > lodash:
+        patched: '2019-07-04T02:07:39.456Z'
+    - s3-uploader > async > lodash:
+        patched: '2019-07-04T02:07:39.456Z'
+    - itemsapi > elastic.js > elasticsearch > lodash:
+        patched: '2019-07-04T02:07:39.456Z'
+    - itemsapi > mongoose > async > lodash:
+        patched: '2019-07-04T02:07:39.456Z'
