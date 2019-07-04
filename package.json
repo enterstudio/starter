@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "postinstall": "./node_modules/.bin/bower cache clean --allow-root && ./node_modules/.bin/bower install --allow-root && node ./src/post_install.js"
+    "postinstall": "./node_modules/.bin/bower cache clean --allow-root && ./node_modules/.bin/bower install --allow-root && node ./src/post_install.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -57,7 +59,8 @@
     "underscore": "^1.8.3",
     "unicode": "^0.6.1",
     "urijs": "^1.18.2",
-    "winston": "^2.2.0"
+    "winston": "^2.2.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -65,5 +68,6 @@
     "should": "^11.1.2",
     "sinon": "^1.17.6",
     "supertest": "^2.0.1"
-  }
+  },
+  "snyk": true
 }
